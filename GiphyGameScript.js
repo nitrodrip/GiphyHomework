@@ -1,12 +1,12 @@
 $(document).ready(function () {
-  var cars = ["Chevy", "Ford", "BMW"];
+  var cars = ["K5 Blazer", "Z28 Camaro", "Dodge Cummins", "Toyota Tacoma"];
 
 
 	// function to make buttons and add to page
   	function populateButtons(arrayToUse) {
     $("#car-buttons").empty();
     
-		//iterate through the car array and dynamically create elements with button classes and append to the document
+		//Go through car array and dynamically create elements with button classes and append to the document
     	for (var i = 0; i < cars.length; i++) {
 		  var a = $("<button>");
 		  	// Added a class
@@ -25,7 +25,7 @@ $(document).ready(function () {
 			$("#car-buttons").append(a); 
     }
   }
-
+	//Populates buttons for cars
   populateButtons(cars);
 
   $(document).on("click", ".car", function () {
@@ -46,7 +46,6 @@ $(document).ready(function () {
     }).done(function (response) {
 
       var results = response.data;
-
       for (var i = 0; i < results.length; i++) {
         var carDiv = $("<div>");
         var rating = results[i].rating;
