@@ -1,13 +1,14 @@
 body {
   font: 18px arial, sans-serif;
-  background: #eee;
+	background-image: url(images/racing-background.jpg)
+/*  background: #eee;*/
 }
 
-#animals {
+#cars {
   width: 70%;
 }
 
-.animal-item {
+.car-item {
   float: left;
   padding: 10px;
 }
@@ -38,10 +39,10 @@ input[type="submit"] {
   font-size: 18px;
   color: #fff;
   cursor: pointer;
-  background: #659a98;
-  border: 0;
-  border-radius: 5px;
-  box-shadow: 2px 2px 3px #bbb;
+  background: #0000ff;
+  border: 10;
+  border-radius: 10px;
+  box-shadow: 5px 5px 4px #bbb;
 }
 
 button:hover,

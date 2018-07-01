@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  var cars = ["Chevy", "Ford"];
+  var cars = ["Chevy", "Ford", "BMW"];
 
 
 	// function to make buttons and add to page
@@ -39,11 +39,11 @@ $(document).ready(function () {
       type +
       "&api_key=27iU0pnwhBKp99Mkdx0L69n1GGbZjDoR&limit=10";
 
+	  //ajax Get to grab animation
     $.ajax({
       url: queryURL,
       method: "GET"
     }).done(function (response) {
-      console.log(response);
 
       var results = response.data;
 
@@ -69,7 +69,7 @@ $(document).ready(function () {
         $("#cars").append(carDiv);
       }
 
-      $(document).on("click", ".animal-image", function () {
+      $(document).on("click", ".car-image", function () {
         var state = $(this).attr("data-state");
         if (state == "still") {
           $(this).attr("src", $(this).data("animate"));
@@ -82,14 +82,14 @@ $(document).ready(function () {
     })
   })
 
-  $("#add-animal").on("click", function (e) {
+  $("#add-car").on("click", function (e) {
     e.preventDefault();
     var userInput = $("input").val();
     console.log(userInput);
     cars.push(userInput);
     console.log(cars);
     populateButtons(cars);
-    $("#animal-input").val("");
+    $("#car-input").val("");
   })
 
 });
