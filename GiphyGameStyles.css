@@ -1,7 +1,7 @@
 body {
   font: 18px arial, sans-serif;
-	background-image: url(images/racing-background.jpg) ;
-	
+	background-image: url(images/street_background.jpg);
+	background-size: cover
 /*  background: #eee;*/
 }
 
@@ -70,13 +70,25 @@ button.active {
 }
 
 #CarSearch {
-	text-decoration-color: aqua;
+	background-color:aliceblue;
+	text-align: center;
+	font-family:fantasy;
+	padding: 10px;
+	border-radius: 2px;
+	
 }
 
 #cars {
   width: 70%;
 	margin-top: 140px;
+}
+
 #car-input {
-	text-align: center;
+	text-align: left;
+	
+}
+
+#add-car {
+	border: none;
 	
 }
