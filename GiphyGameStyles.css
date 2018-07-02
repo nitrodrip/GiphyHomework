@@ -35,7 +35,7 @@ input[type="text"] {
 
 button,
 input[type="submit"] {
-  background: #3498db;
+    background: #3498db;
   background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
   background-image: -moz-linear-gradient(top, #3498db, #2980b9);
   background-image: -ms-linear-gradient(top, #3498db, #2980b9);
@@ -48,7 +48,7 @@ input[type="submit"] {
   color: #ffffff;
   font-size: 20px;
   padding: 10px 20px 10px 20px;
-  border: solid #1f628d 6px;
+  border: solid #081d29 2px;
   text-decoration: none;
 
 }
@@ -76,3 +76,7 @@ button.active {
 #cars {
   width: 70%;
 	margin-top: 140px;
+#car-input {
+	text-align: center;
+	
+}

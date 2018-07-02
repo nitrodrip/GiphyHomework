@@ -18,33 +18,35 @@ $(document).ready(function () {
 			a.attr("src", $(this).data("animate"));
 		  	a.attr("data-state"), $(this).attr("data-state", "animate");
 		  	
-			// Provided the initial button text
+			// Provided the initial button text and add button to the HTML
 			a.text(cars[i]); 
-		  
-			// Added the button to the HTML
 			$("#car-buttons").append(a); 
     }
   }
-	//Populates buttons for cars
+//Populates buttons for cars
   populateButtons(cars);
 
-  $(document).on("click", ".car", function () {
+
+	$(document).on("click", ".car", function () {
     $("#cars").empty();
     $(".car").removeClass("active");
     $(this).addClass("active");
 
     var type = $(this).attr("data-name");
-    var queryURL =
+    
+	  //Giphy API key with 10 amount limit
+	  var queryURL =
       "https://api.giphy.com/v1/gifs/search?q=" +
       type +
       "&api_key=27iU0pnwhBKp99Mkdx0L69n1GGbZjDoR&limit=10";
 
-	  //ajax Get to grab animation
+	  //Start ajax
     $.ajax({
       url: queryURL,
       method: "GET"
     }).done(function (response) {
 
+		//Create var for results
       var results = response.data;
       for (var i = 0; i < results.length; i++) {
         var carDiv = $("<div>");
@@ -55,8 +57,6 @@ $(document).ready(function () {
 
         var carImage = $("<img>");
         carImage.attr("src", still);
-
-
         carImage.attr("data-still", still);
         carImage.attr("data-animate", animated);
         carImage.attr("data-state", "still");
